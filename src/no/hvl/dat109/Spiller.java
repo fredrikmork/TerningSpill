@@ -4,9 +4,8 @@ public class Spiller {
     private String navn;
     private Integer verdi;
 
-    public Spiller(String navn, Integer verdi) {
+    public Spiller(String navn) {
         this.navn = navn;
-        this.verdi = verdi;
     }
 
     public void spill(Kopp kopp){

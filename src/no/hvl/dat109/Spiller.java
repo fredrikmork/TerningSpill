@@ -1,6 +1,8 @@
 package no.hvl.dat109;
 
-public class Spiller {
+import java.util.Comparator;
+
+public class Spiller implements Comparator<Spiller> {
     private String navn;
     private Integer verdi;
 

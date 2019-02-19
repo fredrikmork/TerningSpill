@@ -4,10 +4,20 @@ public class Spiller {
     private String navn;
     private Integer verdi;
 
-    public Spiller(String navn) {
-        this.navn = navn;
+
+    public Spiller () {
+        this.verdi = 0;
     }
 
+    public Spiller(String navn) {
+        this.navn = navn;
+        this.verdi =  0;
+    }
+
+    /**
+     *Spiller triller koppen.
+     * @param kopp med terningverdier
+     */
     public void spill(Kopp kopp){
         verdi = kopp.trill();
     }

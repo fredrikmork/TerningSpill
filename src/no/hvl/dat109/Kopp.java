@@ -8,11 +8,18 @@ public class Kopp {
     private Terning t;
 
 
+    /**
+     * oppretter en kopp med sum 0 og terning uten verdi.
+     */
     public Kopp() {
         sum = 0;
         t = null;
     }
 
+    /**
+     * Triller alle terningene
+     * @return summen av alle terningene
+     */
     public int trill(){
         Random rand = new Random();
         int i = 0;

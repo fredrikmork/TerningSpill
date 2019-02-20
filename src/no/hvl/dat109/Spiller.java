@@ -2,7 +2,7 @@ package no.hvl.dat109;
 
 import java.util.Comparator;
 
-public class Spiller implements Comparator<Spiller> {
+public class Spiller {
     private String navn;
     private Integer verdi;
 

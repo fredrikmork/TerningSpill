@@ -34,13 +34,10 @@ public class TerningSpill {
      * Setter i gang spillet med å trille terningene på alle spillere til det ikke er noen igjen. Så returnere spilleren som vant.
      */
     public void spill(){
-        Iterator<Spiller> iter = spillere.iterator();
-        while(iter.hasNext()){
-            iter.next().spill(kopp);
+        for(Spiller s: spillere) {
+            s.spill(kopp);
         }
-        if (!iter.hasNext()){
-            System.out.println(getVinner() + " Vant med sum: " + getVinner().getVerdi());
-        }
+        System.out.println(getVinner() + " vant med sum: " + getVinner().getVerdi());
     }
 
     /**
@@ -48,6 +45,16 @@ public class TerningSpill {
      * @return spilleren med høyst verdi, også vinneren.
      */
     public Spiller getVinner(){
-        return Collections.max(spillere);
+        Spiller spiller = null;
+        int current = 0;
+        int storst = 0;
+        for(Spiller s: spillere){
+            current = s.getVerdi();
+            if(current > storst){
+                storst = current;
+                spiller = s;
+            }
+        }
+        return spiller;
     }
 }
